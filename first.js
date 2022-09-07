@@ -1,6 +1,3 @@
-const video = document.querySelector("video");
-const btn = document.querySelector("button");
-
 function MediaPlayer(config) {
 
     this.media = config.el;
@@ -19,25 +16,30 @@ MediaPlayer.prototype.pause = function() {
 
 }
 
+MediaPlayer.prototype.togglePlay = function() {
+
+    if (this.media.paused) {
+
+        this.play();
+        
+    } else {
+
+        this.pause();
+        
+    }
+
+}
+
+const video = document.querySelector("video");
+const btn = document.querySelector("button");
+
 const player = new MediaPlayer({el: video});
 
 let statusVideo = "pause";
 
 btn.addEventListener('click', () => {
 
-    if (statusVideo == "pause") {
-
-        player.play();
-
-        statusVideo = "play";
-        
-    } else {
-
-        player.pause();
-
-        statusVideo = "pause";
-        
-    }
+    player.togglePlay();
     
 
 });
