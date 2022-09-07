@@ -2,7 +2,8 @@ import MediaPlayer from "/assets/MediaPlayer.js";
 import AutoPlay from "./plugins/AutoPlay.js"
 
 const video = document.querySelector("video");
-const btn = document.querySelector("button");
+const btnPP = document.querySelector(".btnPlayPause");
+const btnMU = document.querySelector(".btnMuteUnmute");
 
 const config = {
 
@@ -13,9 +14,15 @@ const config = {
 
 const player = new MediaPlayer(config);
 
-btn.addEventListener('click', () => {
+btnPP.addEventListener('click', () => {
 
     player.togglePlay();
     
+
+});
+
+btnMU.addEventListener('click', () => {
+
+    player.toggleMute();
 
 });
