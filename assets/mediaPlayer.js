@@ -30,16 +30,4 @@ MediaPlayer.prototype.togglePlay = function() {
 
 }
 
-const video = document.querySelector("video");
-const btn = document.querySelector("button");
-
-const player = new MediaPlayer({el: video});
-
-let statusVideo = "pause";
-
-btn.addEventListener('click', () => {
-
-    player.togglePlay();
-    
-
-});
+export default MediaPlayer;
