@@ -1,0 +1,1 @@
+npm start -allow-file-access-from-files

@@ -5,7 +5,7 @@
   "license": "MIT",
   "author": "Daniel Pinto <danielandrespintoortega21212@gmail.com",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server" 
   },
   "keywords": [
     "olimpo"
