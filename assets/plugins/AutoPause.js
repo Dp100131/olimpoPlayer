@@ -3,7 +3,10 @@ export default class AutoPause {
     constructor(){
 
         this.threshold = 0.25;
+
         this.handleIntersection = this.handleIntersection.bind(this);
+
+        this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
 
     }
 
@@ -19,6 +22,8 @@ export default class AutoPause {
         });
 
         observer.observe(this.player.media);
+
+        document.addEventListener('visibilitychange', this.handleVisibilityChange);
 
     }
 
@@ -47,6 +52,29 @@ export default class AutoPause {
             
         }
     
+    }
+
+    handleVisibilityChange(){
+
+        const isVisible = document.visibilityState === "visible";
+
+        /* console.log(document.visibilityState); */
+
+        if (isVisible) {
+            
+            this.player.play();
+
+            /* console.log(document.visibilityState); */
+
+        } else {
+
+            /* console.log(document.visibilityState); */
+
+            this.player.pause();
+            
+        }
+
+
     }
     
     

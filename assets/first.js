@@ -17,16 +17,11 @@ const player = new MediaPlayer(config);
 
 btnPP.addEventListener('click', () => {
 
-    console.log("aja");
-
     player.togglePlay();
     
-
 });
 
 btnMU.addEventListener('click', () => {
-
-    console.log("aja");
 
     player.toggleMute();
 
