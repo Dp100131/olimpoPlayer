@@ -1,4 +1,5 @@
 export default function MediaPlayer(config) {
+    
     this.media = config.el;
     this.plugins = config.plugins || [];
 
@@ -28,6 +29,7 @@ MediaPlayer.prototype._initPlugins = function(){
 
     this.plugins.forEach(plugin => {
 
+        console.log(plugin);
         plugin.run(player);
         
     });

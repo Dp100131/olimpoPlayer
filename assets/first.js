@@ -1,5 +1,6 @@
 import MediaPlayer from "/assets/MediaPlayer.js";
-import AutoPlay from "./plugins/AutoPlay.js"
+import AutoPlay from "./plugins/AutoPlay.js";
+import AutoPause from "./plugins/AutoPause.js";
 
 const video = document.querySelector("video");
 const btnPP = document.querySelector(".btnPlayPause");
@@ -8,7 +9,7 @@ const btnMU = document.querySelector(".btnMuteUnmute");
 const config = {
 
     el: video,
-    plugins: [new AutoPlay()]
+    plugins: [new AutoPlay(), new AutoPause()]
 
 }
 
@@ -16,12 +17,16 @@ const player = new MediaPlayer(config);
 
 btnPP.addEventListener('click', () => {
 
+    console.log("aja");
+
     player.togglePlay();
     
 
 });
 
 btnMU.addEventListener('click', () => {
+
+    console.log("aja");
 
     player.toggleMute();
 
