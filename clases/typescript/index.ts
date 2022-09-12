@@ -78,3 +78,25 @@ function fullName(firstName:string, lastName?: string): string {
 }
 
 const Daniel = fullName(nombre);
+
+// Interfaces
+
+interface Rectangulo{
+
+    ancho: number;
+    alto: number;
+
+}
+
+let rect: Rectangulo = {
+
+    ancho: 4,
+    alto: 6
+
+}
+
+function area(r: Rectangulo): number{
+
+    return r.alto * r.ancho;
+
+}

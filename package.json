@@ -1,33 +1,22 @@
 {
   "name": "olimpo-media-player",
-
   "version": "1.0.0",
-
   "description": "",
-
   "license": "MIT",
-
   "author": "Daniel Pinto <danielandrespintoortega21212@gmail.com",
-
   "scripts": {
     "start": "parcel index.html"
   },
-
   "keywords": [
     "olimpo"
   ],
-
   "devDependencies": {
     "live-server": "^1.2.2",
-    "parcel-bundler": "^1.12.5"
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.8.3"
   },
-
   "type": "module",
-
   "browserslist": [
-
     "last 1 Chrome version"
-
   ]
-
 }
