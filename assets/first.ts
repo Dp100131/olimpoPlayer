@@ -1,6 +1,7 @@
 import MediaPlayer from "./MediaPlayer";
 import AutoPlay from "./plugins/AutoPlay";
 import AutoPause from "./plugins/AutoPause";
+import AdsPlugin from "./plugins/Ads/index";
 
 const video = document.querySelector("video");
 const botonPP = document.querySelector(".btnPlayPause");
@@ -13,7 +14,7 @@ const btnMU: HTMLElement = botonMU! as HTMLElement;
 const config = {
 
     el: video,
-    plugins: [new AutoPlay(), new AutoPause()]
+    plugins: [new AutoPlay(), new AutoPause(), new AdsPlugin()]
 
 }
 
